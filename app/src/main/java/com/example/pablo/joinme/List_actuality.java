@@ -11,6 +11,7 @@ public class List_actuality {
     String place;
     String time ;
     String topic ;
+    String leveltxt;
     int level ;
 
     // Constructor
@@ -20,6 +21,7 @@ public class List_actuality {
         this.time = time ;
         this.topic = topic ;
         this.level = level ;
+        this.leveltxt = String.valueOf(level) ;
 
     }
     // Getter
@@ -27,5 +29,6 @@ public class List_actuality {
     public String getTime() {return this.time ;}
     public String getTopic() {return this.topic ;}
     public int getLevel() {return this.level ;}
+    public String getLeveltxt() {return this.leveltxt ;}
 
 }

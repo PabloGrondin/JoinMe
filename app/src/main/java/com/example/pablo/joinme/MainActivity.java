@@ -140,11 +140,6 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getBaseContext(),message,Toast.LENGTH_SHORT).show();
     }
 
-    public void showTimePickerDialog(View v) {
-        DialogFragment newFragment = new TimePickerFragment();
-        newFragment.show(getSupportFragmentManager(),"Time Picker");
-
-    }
 
 
     /*

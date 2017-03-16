@@ -51,7 +51,7 @@ This fragment will display the actuality so we use a list fragment
 
         String[] place = {"English","French","Khmer","Japanese","Russian","Chinese"};
         String[] topic = {"Osef","txt2","Lieu evenement","Encore autre chose","Biblio","cafe"} ;
-        String[] time = {"12h00","13h15","20h30 20h30","13h15","12h00","20h30"} ;
+        String[] time = {"12h00","13h15","20h30","13h15","12h00","20h30"} ;
         int[] level = {1,4,3,6,8,3,2} ;
 
 
@@ -71,7 +71,9 @@ This fragment will display the actuality so we use a list fragment
 
         for (int i = 0; i < place.length ; i++)
         {
-            pays.add(new List_actuality(place[i],topic[i],time[i],level[i])) ;
+           // pays.add(new List_actuality(place[i],topic[i],time[i],level[i])) ;
+            pays.add(new List_actuality(place[i],time[i],topic[i],level[i])) ;
+
         }
 
 

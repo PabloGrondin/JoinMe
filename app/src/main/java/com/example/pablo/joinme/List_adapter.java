@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.LauncherActivity;
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -65,6 +66,8 @@ public class List_adapter extends BaseAdapter {
                     .findViewById(R.id.topicEvent);
             mViewHolder.textViewLevel = (SeekBar) convertView
                     .findViewById(R.id.levelEvent);
+            mViewHolder.textViewLevelstring = (TextView) convertView
+                    .findViewById(R.id.levelTextEvent) ;
 
             // nous attribuons comme tag notre MyViewHolder à convertView
             convertView.setTag(mViewHolder);
@@ -81,8 +84,18 @@ public class List_adapter extends BaseAdapter {
         mViewHolder.textViewPlace.setText(listItem.getPlace());
         mViewHolder.textViewTime.setText(String.valueOf(listItem.getTime()));
         mViewHolder.textViewTopic.setText(listItem.getTopic());
+        mViewHolder.textViewLevelstring.setText(" : " + listItem.getLeveltxt());
         mViewHolder.textViewLevel.setProgress(listItem.getLevel());
+
+        // Put a max vdefault value and disable the user to change the value of the seekbar
         mViewHolder.textViewLevel.setMax(5);
+
+        mViewHolder.textViewLevel.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                return true;
+            }
+        });
 
 
         // nous retournos la vue de l'item demandé
@@ -90,7 +103,7 @@ public class List_adapter extends BaseAdapter {
 
     }
     private class MyViewHolder {
-        TextView textViewPlace, textViewTime, textViewTopic ;
+        TextView textViewPlace, textViewTime, textViewTopic, textViewLevelstring ;
         SeekBar textViewLevel ;
 
     }

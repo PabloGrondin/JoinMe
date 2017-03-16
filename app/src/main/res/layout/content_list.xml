@@ -7,7 +7,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="15dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,10 +44,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="15dp">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Topic"
             android:textSize="20dp" />
@@ -61,12 +63,29 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Level"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:id="@+id/levelTextEvent"/>
 
         <SeekBar
+            android:id="@+id/levelEvent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/levelEvent"/>
+            android:clickable="false"
+            android:layout_gravity="center"/>
+
+
     </LinearLayout>
 
 </LinearLayout>

@@ -11,6 +11,8 @@ import android.widget.TimePicker;
 
 /**
  * Created by Pablo on 16/03/2017.
+ * This class is to print a frament to allow the user to choose the time of the event
+ *
  */
 
 public class TimePickerFragment extends DialogFragment
